@@ -38,7 +38,7 @@ const BlogDetail = () => {
   };
   const fetchDetails = async () => {
     const res = await axios
-      .get(`https://backend-tachyon.herokuapp.com/api/blog/${id}`)
+      .get(`/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -54,7 +54,7 @@ const BlogDetail = () => {
   }, [id]);
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://backend-tachyon.herokuapp.com/api/blog/update/${id}`, {
+      .put(`/api/blog/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })

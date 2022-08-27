@@ -24,7 +24,7 @@ const Blog = ({ title, description, imageURL, userName, isUser, id }) => {
 
   const deleteRequest = async () => {
     const res = await axios
-      .delete(`https://backend-tachyon.herokuapp.com/api/blog/${id}`)
+      .delete(`/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
