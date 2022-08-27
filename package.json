@@ -5,12 +5,10 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "frontend-install": "npm install --prefix frontend",
-    "frontend": "npm start --prefix frontend",
+    
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "backend" : "nodemon app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node app.js"
+   
   },
   "author": "",
   "license": "ISC",
@@ -20,8 +18,6 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.5.2",
-    
     "nodemon": "^2.0.19"
-    
   }
 }
